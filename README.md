@@ -12,14 +12,14 @@ The general format: **MAJOR.MINOR.PATCH**, eg.`1.0.1`
 
 ## Install the terraform CLI
 
-### Considersations with the Terraform CLI changes
+### Considerations with the Terraform CLI changes
 The Terraform CLI Installation instructions have changed due to gpg
-keyring changes. So we needed to refer to the lastest install CLI
+keyring changes. So we needed to refer to the latest install CLI
 instructions via Terraform Documentation and change the scripting for install.
 
 [Install Terraform CLI](https://developer.hashicorp.com/terraform/tutorials/aws-get-started/install-cli)
 
-### Considerations for Linux Distritbution
+### Considerations for Linux Distribution
 
 This project is built against Ubuntu.
 Please consider checking your Linux Distribution needs.
@@ -57,7 +57,7 @@ This bash script is located here: [./bin/install_terraform_cli](./bin/install_te
 
 #### SheBang Considerations
 
-A Shebang (pronounced Sha-Bang) tells the bash script what program that will inerpret the script. eg. `#!/bin/bash`
+A Shebang (pronounced Sha-Bang) tells the bash script what program that will interpret the script. eg. `#!/bin/bash`
 
 ChatGPT recommended this format for bash:`#!/usr/bin/env bash`
 
@@ -78,7 +78,7 @@ eg. `source ./bin/install_terraform_cli`
 
 #### Linux Permissions Considerations
 
-In order to make our bash scripts executeable 
+In order to make our bash scripts executable 
 
 ```sh
 chmod u+x ./bin/install_terraform_cli
