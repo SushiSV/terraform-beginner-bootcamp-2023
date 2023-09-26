@@ -119,7 +119,7 @@ HELLO='world' ./bin/print_message
 Within a bash script we can set env without writing export eg. 
 
 ```sh
-#!/usr/bin/evn bash
+#!/usr/bin/env bash
 
 HELLO='world'
 
@@ -138,7 +138,7 @@ If you want env vars to persist across all future bash terminals that are open y
 
 #### Persisting Env Vars in Gitpod
 
-We can persist env vars into gitpod by storing them in Gitpod Serect Storage.
+We can persist env vars into gitpod by storing them in Gitpod Secret Storage.
 
 ```
 gp env HELLO='world'
