@@ -159,11 +159,16 @@ We can check to see if our aws credentials are configured correctly by running t
 ```sh
 aws sts get-caller-identity
 ```
-If your credentials are not configured then follow this guide:
 
-[AWS CLI ENV VARS](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+We'll need to generate AWS CLI credits form IAM User in order to use AWS CLI.
+
+If your credentials are not configured then We will need to generate AWS CLI credits from IAM User in order to use AWS CLI.
+
+Guide to configure AWS CLI: [AWS CLI ENV VARS](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
 
 **Never put your credentials in the file and commit to Github.**
+
+**Good practice is to rotate your access key and secret access keys.**
 
 Instead you want to copy and paste the example under the example and use it to copy and paste into terminal and hit enter:
 
