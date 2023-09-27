@@ -148,3 +148,46 @@ All future workspace launched will set env vars for all bash terminals opened in
 
 You can also set env vars in the `.gitpod.yml` but this can only contain non-sensitive env vars.
 
+### AWS CLI Installation
+
+AWS CLI is installed for the project via the bash script [`./bin/install_aws_cli`](./bin/install_aws_cli)
+
+[Getting started with install (AWS CLI)](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+We can check to see if our aws credentials are configured correctly by running the following AWS CLI command.
+
+```sh
+aws sts get-caller-identity
+```
+
+We'll need to generate AWS CLI credits form IAM User in order to use AWS CLI.
+
+If your credentials are not configured then We will need to generate AWS CLI credits from IAM User in order to use AWS CLI.
+
+Guide to configure AWS CLI: [AWS CLI ENV VARS](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+**Never put your credentials in the file and commit to Github.**
+
+**Good practice is to rotate your access key and secret access keys.**
+
+Instead you want to copy and paste the example under the example and use it to copy and paste into terminal and hit enter:
+
+```
+AWS_ACCESS_KEY_ID='AKIAIOSFODNN7EXAMPLE'
+AWS_SECRET_ACCESS_KEY='wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
+AWS_DEFAULT_REGION='us-east-1'
+
+AWS_ACCESS_KEY_ID='YOURACCESSKEY'
+AWS_SECRET_ACCESS_KEY='YOURSECRETACCESSKEY'
+AWS_DEFAULT_REGION='us-east-1'
+```
+
+If succeed you should see a json payload like this.
+
+```json
+{
+    "UserId": "AIDA6IMYNEHGZBIPZP6JM",
+    "Account": "123456789012",
+    "Arn": "arn:aws:iam::123456789012:user/terraform-beginner-bootcamp"
+}
+```
