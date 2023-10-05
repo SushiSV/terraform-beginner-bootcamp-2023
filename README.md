@@ -283,3 +283,21 @@ Provide the following code (replace your token in the file):
   }
 }
 ```
+
+After creating a token and entering your token into the json file.  You could also run into an error when trying to `terraform init`. You may get a error that looks like this:
+
+<img width="838" alt="Screenshot_20231004_052301" src="https://github.com/SushiSV/terraform-beginner-bootcamp-2023/assets/111544292/ca760bde-e08e-475e-a46c-165f0e46af23">
+
+This means that your local terraform version does not match the remote terraform and will cause incompatibility issues.
+
+To solve this problem we need to head into terraform.io.
+
+`terraform.io > try terraform cloud > workspaces > terra-house-1` <img width="838" alt="terraform 1" src="https://github.com/SushiSV/terraform-beginner-bootcamp-2023/assets/111544292/09911737-13ee-4fa3-862c-b605c5e24755">`
+
+While in terra-house-1, look on the left panel and click on settings
+<img width="838" alt="terraform 2" src="https://github.com/SushiSV/terraform-beginner-bootcamp-2023/assets/111544292/0c33fee7-5602-4251-8b4d-e909426f0651">
+
+While you are in settings scroll down until you come across `Terraform Version` then select the version accodingly.
+<img width="838" alt="terraform 3" src="https://github.com/SushiSV/terraform-beginner-bootcamp-2023/assets/111544292/5c523647-bd85-4186-9872-42caaa721e11">
+
+This should allow you to contintue with `terraform init` to complete your configurations.
