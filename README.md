@@ -301,3 +301,5 @@ While you are in settings scroll down until you come across `Terraform Version` 
 <img width="838" alt="terraform 3" src="https://github.com/SushiSV/terraform-beginner-bootcamp-2023/assets/111544292/5c523647-bd85-4186-9872-42caaa721e11">
 
 This should allow you to contintue with `terraform init` to complete your configurations.
+
+We have automated this workaround with the following bash script [bin/generate_tfrc_credentials](bin/generate_tfrc_credentials)
