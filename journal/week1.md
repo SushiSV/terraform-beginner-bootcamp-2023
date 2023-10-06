@@ -54,7 +54,7 @@ This is the default file to load in terraform variables in blunk
 
 ## What happens if we lose our state file?
 
-If you lose your statefile, you most likley have to tear down all your cloud infrastructure manually.
+If you lose your statefile, you most likely have to tear down all your cloud infrastructure manually.
 
 You can use terraform port but it won't for all cloud resources. You need check the terraform providers documentation for which resources support import.
 
