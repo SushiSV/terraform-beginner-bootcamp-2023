@@ -1,6 +1,6 @@
 # Terraform Beginner Bootcamp 2023
 
-`Need to add image here`
+<img width="926" alt="Untitled" src="https://github.com/SushiSV/terraform-beginner-bootcamp-2023/assets/111544292/3d50fe82-7706-40f7-b3e4-7b5f1b60ddc5">
 
 ## Weekly Journals
 
