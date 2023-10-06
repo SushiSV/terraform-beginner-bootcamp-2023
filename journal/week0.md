@@ -1,4 +1,4 @@
- Terraform Beginner Bootcamp 2023 - Week 0
+# Terraform Beginner Bootcamp 2023 - Week 0
 
 - [Semantic Versioning :four\_leaf\_clover:](#semantic-versioning-four_leaf_clover)
 - [Install the terraform CLI](#install-the-terraform-cli)
