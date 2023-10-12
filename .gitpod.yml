@@ -1,4 +1,5 @@
 tasks:
+
   - name: terraform
     before: |
       cd $PROJECT_ROOT
