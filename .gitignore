@@ -33,4 +33,6 @@ override.tf.json
 .terraformrc
 terraform.rc
 
-terraform-provider-terratowns/terraform-provider-terratowns_v*
+# "terraform-provider-terratowns/terraform-provider-terratowns_v*" did not work for me
+# it still added the "terraform-provider-terratowns_v*" to my staged changed.
+terraform-provider-terratowns_v*
