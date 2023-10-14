@@ -13,12 +13,12 @@ terraform {
   #    name = "terra-house-1"
   #  }
   #}
-  #cloud {
-  #  organization = "Sushi-SV"
-  #  workspaces {
-  #    name = "terra-house-1"
-  #  }
-  #}
+  cloud {
+    organization = "Sushi-SV"
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
 
 }
 
@@ -27,28 +27,43 @@ provider "terratowns" {
   user_uuid = var.teacherseat_user_uuid
   token = var.terratowns_access_token
 }
-#provider "terratowns" {
-  #endpoint = "https://terratowns.cloud/api"
-  #user_uuid="1faac276-242e-445c-b6ac-5d907f643666" 
-  #token="f6111721-7146-451a-8592-85480a947ef0"
-#}
 
-module "terrahouse_aws" {
-  source = "./modules/terrahouse_aws"
+module "home_chop_hosting" {
+  source = "./modules/terrahome_aws"
   user_uuid = var.teacherseat_user_uuid
-  index_html_filepath = var.index_html_filepath
-  error_html_filepath = var.error_html_filepath
-  content_version = var.content_version
-  assets_path = var.assets_path
+  public_path = var.chop.public_path
+  content_version = var.chop.content_version
+
 }
 
 resource "terratowns_home" "home" {
-  name = "Name/Title goes here"
+  name = "Tony Tony Chopper"
   description = <<DESCRIPTION
-Brief description of your own idea
+Tony Tony Chopper is a fictional character from the popular anime and manga series One Piece. 
+He is a reindeer who can transform into different forms and serves as the doctor of the Straw Hat Pirates.
 DESCRIPTION
-  domain_name = module.terrahouse_aws.cloudfront_url
+  domain_name = module.home_chop_hosting.domain_name #Live server
   #domain_name = "8908903fdq3gz.cloudfront.net" # Use this one for testing
   town = "missingo" #Change this to other name server
-  content_version = 1
+  content_version = var.chop.content_version
 }
+
+#module "home_drstone_hosting" {
+  #source = "./modules/terrahome_aws"
+  #user_uuid = var.teacherseat_user_uuid
+  #public_path = var.drstone.public_path
+  #content_version = var.drstone.content_version
+#
+#}
+#
+#resource "terratowns_home" "home_drstone" {
+  #name = "Dr. Stone"
+  #description = <<DESCRIPTION
+#The story follows a brilliant young scientist, Senku Ishigami, 
+#who seeks to rebuild civilization and technology after humanity is petrified for thousands of years.
+#DESCRIPTION
+  #domain_name = module.home_drstone_hosting.domain_name
+  ##domain_name = "8908903fdq3gz.cloudfront.net" # Use this one for testing
+  #town = "missingo" #Change this to other name server
+  #content_version = var.drstone.content_version
+#}
