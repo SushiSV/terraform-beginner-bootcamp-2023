@@ -27,12 +27,6 @@ provider "terratowns" {
   user_uuid = var.teacherseat_user_uuid
   token = var.terratowns_access_token
 }
-#provider "terratowns" {
-  #endpoint = "https://terratowns.cloud/api"
-  #user_uuid="1faac276-242e-445c-b6ac-5d907f643666" 
-  #token="f6111721-7146-451a-8592-85480a947ef0"
-#}
-
 module "terrahouse_aws" {
   source = "./modules/terrahouse_aws"
   user_uuid = var.teacherseat_user_uuid
